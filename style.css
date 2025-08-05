@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #0056b3; /* 선명한 파란색 */
+    --light-blue: #e6f0ff;    /* 아주 연한 파란색 */
+    --text-color: #343a40;      /* 기본 텍스트 색상 */
+    --secondary-text-color: #6c757d; /* 부제목 등 2차 텍스트 색상 */
+    --border-color: #dee2e6;  /* 테두리 색상 */
+    --bg-color: #f8f9fa;        /* 페이지 배경 색상 */
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* --- 헤더 및 이미지 --- */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px; /* 부제목과의 간격을 위해 여백 조정 */
+}
+
+/* 부제목 스타일 추가 */
+.subtitle {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+    margin: 0 auto 30px; /* 위쪽 여백 0, 좌우 자동, 아래쪽 여백 30px */
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* --- 섹션 레이아웃 --- */
+.sections-wrapper {
+    display: flex;
+    gap: 30px; /* 카드 사이의 간격 */
+    flex-wrap: wrap;
+}
+
+/* --- 섹션 카드 --- */
+.section-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    flex: 1; /* 양쪽 카드가 공간을 균등하게 나눠 가짐 */
+    min-width: 300px; /* 최소 너비 지정 */
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* --- 링크 아이템 --- */
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    background-color: var(--light-blue);
+    border: 1px solid #b3d1ff;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.link-item:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.2);
+}
+
+/* --- 반응형 디자인 --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    /* 모바일에서 부제목 스타일 조정 */
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .sections-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
